@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina HTML di esempio</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --accent: #2563eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e5e7eb;
+        --accent: #60a5fa;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.5rem;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgb(0 0 0 / 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    }
+
+    p { line-height: 1.6; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      background: var(--accent);
+      color: white;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Ciao! Questa è una pagina HTML</h1>
+    <p>
+      Questo esempio include una struttura base con HTML5, stili CSS integrati
+      e un layout responsive semplice.
+    </p>
+    <a class="btn" href="#" aria-label="Pulsante di esempio">Inizia</a>
+  </main>
+</body>
+</html>
