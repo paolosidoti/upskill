@@ -40,6 +40,7 @@
           <h3>${project.title}</h3>
           <p>${project.shortDescription}</p>
           <a href="project.html?id=${encodeURIComponent(project.id)}" aria-label="Vedi progetto ${project.title}">Vedi progetto</a>
+          ${project.projectUrl && project.projectUrl !== '#' ? `<a href="${project.projectUrl}" target="_blank" rel="noopener" aria-label="Apri sito del progetto ${project.title}">Visita sito</a>` : ''}
         </div>
       </article>
     `).join('');
