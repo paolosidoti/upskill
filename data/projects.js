@@ -1,7 +1,7 @@
 const projects = [
   {
     id: "portfolio-studente",
-    title: "Portfolio studente",
+    title: "Portfolio studente 2",
     category: "Web Design",
     year: "2026",
     client: "Progetto didattico",
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: "restyling-brand-locale",
-    title: "Restyling brand locale",
+    title: "Restyling brand locale 2",
     category: "UX/UI",
     year: "2025",
     client: "Attività locale",
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     id: "corso-web-design-base",
-    title: "Corso web design base",
+    title: "Corso web design base 2",
     category: "Formazione",
     year: "2024",
     client: "Accademia creativa",
