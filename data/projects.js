@@ -75,3 +75,6 @@ const projects = [
     projectUrl: "#"
   }
 ];
+
+
+window.projects = projects;

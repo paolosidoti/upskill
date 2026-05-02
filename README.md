@@ -71,3 +71,15 @@ projects.push({
 4. Scegli **Deploy from a branch**.
 5. Seleziona branch **main** e cartella **/root**.
 6. Salva e apri il link generato.
+
+## Nota importante: perché non vedevo le pagine progetto
+
+Il sito legge i dati da `window.projects`.
+Per questo, in `data/projects.js` trovi alla fine:
+
+```js
+window.projects = projects;
+```
+
+Se questa riga manca, la homepage non riesce a generare le card e `project.html?id=...` non trova i dati.
+
