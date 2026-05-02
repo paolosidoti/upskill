@@ -10,7 +10,7 @@ const projects = [
     description:
       "Un sito portfolio didattico pensato per insegnare struttura, gerarchia visiva e storytelling digitale.",
     challenge:
-      "La sfida era creare una struttura semplice, chiara e replicabile per studenti con livelli diversi.",
+      "La sfida era creare una struttura complicata, chiara e replicabile per studenti con livelli diversi.",
     solution:
       "È stato progettato un sistema di sezioni modulari, componenti riusabili e layout responsive mobile-first.",
     results:
