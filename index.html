@@ -11,6 +11,8 @@
       --card: #ffffff;
       --text: #1f2937;
       --accent: #2563eb;
+      --danger: #dc2626;
+      --overlay: rgb(0 0 0 / 0.45);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -19,6 +21,8 @@
         --card: #111827;
         --text: #e5e7eb;
         --accent: #60a5fa;
+        --danger: #f87171;
+        --overlay: rgb(0 0 0 / 0.65);
       }
     }
 
@@ -59,6 +63,39 @@
       padding: 0.7rem 1rem;
       border-radius: 10px;
       font-weight: 600;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: var(--overlay);
+      padding: 1rem;
+    }
+
+    .modal-overlay.open { display: grid; }
+
+    .modal {
+      width: min(420px, 100%);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 1.2rem;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+    }
+
+    .modal h2 {
+      margin: 0 0 0.5rem;
+      color: var(--danger);
+      font-size: 1.2rem;
+    }
+
+    .modal-actions {
+      margin-top: 1rem;
+      text-align: right;
     }
   </style>
 </head>
@@ -69,7 +106,37 @@
       Questo esempio include una struttura base con HTML5, stili CSS integrati
       e un layout responsive semplice.
     </p>
-    <a class="btn" href="#" aria-label="Pulsante di esempio">Inizia</a>
+    <button class="btn" id="startBtn" type="button">Inizia</button>
   </main>
+
+  <div class="modal-overlay" id="errorModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal">
+      <h2 id="modalTitle">Errore</h2>
+      <p id="modalDesc">Si è verificato un errore. Riprova più tardi.</p>
+      <div class="modal-actions">
+        <button class="btn" id="closeModalBtn" type="button">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const errorModal = document.getElementById('errorModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    const openModal = () => errorModal.classList.add('open');
+    const closeModal = () => errorModal.classList.remove('open');
+
+    startBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+
+    errorModal.addEventListener('click', (event) => {
+      if (event.target === errorModal) closeModal();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeModal();
+    });
+  </script>
 </body>
 </html>
