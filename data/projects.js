@@ -22,7 +22,7 @@ const projects = [
       "assets/img/project-placeholder-1.svg",
       "assets/img/project-placeholder-2.svg"
     ],
-    projectUrl: "https://example.com/portfolio-studente"
+    projectUrl: ""
   },
   {
     id: "restyling-brand-locale",
@@ -47,7 +47,7 @@ const projects = [
       "assets/img/project-placeholder-2.svg",
       "assets/img/project-placeholder-3.svg"
     ],
-    projectUrl: "https://example.com/restyling-brand-locale"
+    projectUrl: ""
   },
   {
     id: "corso-web-design-base",
@@ -72,7 +72,7 @@ const projects = [
       "assets/img/project-placeholder-3.svg",
       "assets/img/project-placeholder-1.svg"
     ],
-    projectUrl: "https://example.com/corso-web-design-base"
+    projectUrl: ""
   }
 ];
 
