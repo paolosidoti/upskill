@@ -1,0 +1,70 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e2e8f0;
+  --shadow: 0 10px 30px rgb(15 23 42 / 8%);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+img { max-width: 100%; display: block; border-radius: var(--radius-sm); }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.narrow { width: min(760px, 92%); }
+.section { padding: var(--space-5) 0; }
+.alt-bg { background: #f1f5f9; }
+.skip-link { position: absolute; left: -999px; top: auto; }
+.skip-link:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem; border-radius: 6px; }
+.site-header { position: sticky; top: 0; z-index: 100; background: rgb(248 250 252 / 92%); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+.logo { font-weight: 700; color: var(--text); text-decoration: none; }
+.site-nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; }
+.site-nav a { text-decoration: none; color: var(--text); }
+.menu-toggle { display: none; border: 1px solid var(--border); background: #fff; border-radius: 8px; padding: 0.4rem 0.7rem; }
+.hero h1 { font-size: clamp(1.9rem, 4vw, 3rem); margin: 0 0 var(--space-2); }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .4rem; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 65ch; }
+.hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: var(--space-3); }
+.btn { display: inline-block; border: 0; border-radius: 10px; padding: .7rem 1rem; text-decoration: none; font-weight: 600; transition: .2s ease; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); color: #fff; }
+.btn-secondary { background: #fff; color: var(--text); border: 1px solid var(--border); }
+.grid { display: grid; gap: var(--space-2); }
+.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-3); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgb(15 23 42 / 12%); }
+.project-card { overflow: hidden; padding: 0; }
+.project-card .project-content { padding: var(--space-3); }
+.project-meta { color: var(--muted); font-size: .9rem; }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: var(--space-2); }
+.steps li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-3); display: flex; flex-direction: column; gap: .4rem; }
+.social-links { list-style: none; display: flex; gap: 1rem; padding: 0; }
+.site-footer { border-top: 1px solid var(--border); padding: var(--space-3) 0; color: var(--muted); }
+.project-layout { display: grid; gap: var(--space-4); }
+.project-info { display: grid; gap: var(--space-2); grid-template-columns: repeat(4,minmax(0,1fr)); }
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-2); }
+.reveal { opacity: 0; transform: translateY(20px); transition: .5s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 960px) {
+  .cards-4, .cards-3, .steps, .project-info { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 700px) {
+  .menu-toggle { display: inline-block; }
+  .site-nav { position: absolute; right: 4%; top: 72px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1rem; display: none; min-width: 220px; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; }
+  .cards-4, .cards-3, .steps, .project-info, .gallery { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio di Paolo Sidoti: web design, formazione e progetti digitali.">
+  <title>Paolo Sidoti | Web Design & Formazione</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home" aria-label="Vai alla home">Paolo Sidoti</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Apri menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Menu principale">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#progetti">Progetti</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section">
+      <div class="container">
+        <p class="eyebrow">Web designer / Docente</p>
+        <h1>Web design, formazione e progetti digitali</h1>
+        <p class="lead">Aiuto persone, aziende e studenti a progettare siti web chiari, usabili e coerenti.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#progetti">Guarda i progetti</a>
+          <a class="btn btn-secondary" href="#contatti">Contattami</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chi-sono" class="section">
+      <div class="container narrow">
+        <h2>Chi sono</h2>
+        <p>Mi occupo di web design e formazione, con un approccio pratico tra WordPress, UX/UI, Figma e prototipazione. Affianco professionisti e studenti nella costruzione di prodotti digitali ordinati, accessibili e orientati ai risultati.</p>
+      </div>
+    </section>
+
+    <section id="servizi" class="section alt-bg">
+      <div class="container">
+        <h2>Servizi</h2>
+        <div class="grid cards-4">
+          <article class="card reveal"><h3>Siti web WordPress</h3><p>Siti veloci, chiari e facilmente gestibili.</p></article>
+          <article class="card reveal"><h3>UX/UI e prototipi Figma</h3><p>Interfacce intuitive e prototipi per validare idee.</p></article>
+          <article class="card reveal"><h3>Formazione web design</h3><p>Percorsi didattici modulari per studenti e team.</p></article>
+          <article class="card reveal"><h3>Consulenza digitale</h3><p>Supporto strategico su contenuti, struttura e conversione.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="progetti" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Progetti</h2>
+        </div>
+        <div id="projects-grid" class="grid cards-3" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt-bg" id="metodo">
+      <div class="container">
+        <h2>Metodo</h2>
+        <ol class="steps">
+          <li class="reveal"><strong>Analisi</strong><span>Obiettivi, utenti e contenuti.</span></li>
+          <li class="reveal"><strong>Prototipo</strong><span>Wireframe e UI in Figma.</span></li>
+          <li class="reveal"><strong>Sviluppo</strong><span>Implementazione curata e responsive.</span></li>
+          <li class="reveal"><strong>Pubblicazione</strong><span>Deploy e ottimizzazione continua.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contatti" class="section">
+      <div class="container narrow">
+        <h2>Contatti</h2>
+        <p>Scrivimi a <a href="mailto:ciao@paolosidoti.it">ciao@paolosidoti.it</a></p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Profilo LinkedIn">LinkedIn</a></li>
+          <li><a href="#" aria-label="Profilo GitHub">GitHub</a></li>
+          <li><a href="#" aria-label="Profilo Behance">Behance</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Paolo Sidoti — Portfolio statico data-driven.</p>
+    </div>
+  </footer>
+
+  <script src="data/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
