@@ -1,142 +1,103 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagina HTML di esempio</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --accent: #2563eb;
-      --danger: #dc2626;
-      --overlay: rgb(0 0 0 / 0.45);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --card: #111827;
-        --text: #e5e7eb;
-        --accent: #60a5fa;
-        --danger: #f87171;
-        --overlay: rgb(0 0 0 / 0.65);
-      }
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      padding: 1.5rem;
-    }
-
-    .card {
-      width: min(680px, 100%);
-      background: var(--card);
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgb(0 0 0 / 0.08);
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-    }
-
-    p { line-height: 1.6; }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      background: var(--accent);
-      color: white;
-      padding: 0.7rem 1rem;
-      border-radius: 10px;
-      font-weight: 600;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      display: none;
-      place-items: center;
-      background: var(--overlay);
-      padding: 1rem;
-    }
-
-    .modal-overlay.open { display: grid; }
-
-    .modal {
-      width: min(420px, 100%);
-      background: var(--card);
-      color: var(--text);
-      border-radius: 14px;
-      padding: 1.2rem;
-      box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
-    }
-
-    .modal h2 {
-      margin: 0 0 0.5rem;
-      color: var(--danger);
-      font-size: 1.2rem;
-    }
-
-    .modal-actions {
-      margin-top: 1rem;
-      text-align: right;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio di Paolo Sidoti: web design, formazione e progetti digitali.">
+  <title>Paolo Sidoti | Web Design & Formazione</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="card">
-    <h1>Ciao! Questa è una pagina HTML</h1>
-    <p>
-      Questo esempio include una struttura base con HTML5, stili CSS integrati
-      e un layout responsive semplice.
-    </p>
-    <button class="btn" id="startBtn" type="button">Inizia</button>
+  <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home" aria-label="Vai alla home">Paolo Sidoti</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Apri menu">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Menu principale">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#progetti">Progetti</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section">
+      <div class="container">
+        <p class="eyebrow">Web designer / Docente</p>
+        <h1>Web design, formazione e progetti digitali</h1>
+        <p class="lead">Aiuto persone, aziende e studenti a progettare siti web chiari, usabili e coerenti.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#progetti">Guarda i progetti</a>
+          <a class="btn btn-secondary" href="#contatti">Contattami</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chi-sono" class="section">
+      <div class="container narrow">
+        <h2>Chi sono</h2>
+        <p>Mi occupo di web design e formazione, con un approccio pratico tra WordPress, UX/UI, Figma e prototipazione. Affianco professionisti e studenti nella costruzione di prodotti digitali ordinati, accessibili e orientati ai risultati.</p>
+      </div>
+    </section>
+
+    <section id="servizi" class="section alt-bg">
+      <div class="container">
+        <h2>Servizi</h2>
+        <div class="grid cards-4">
+          <article class="card reveal"><h3>Siti web WordPress</h3><p>Siti veloci, chiari e facilmente gestibili.</p></article>
+          <article class="card reveal"><h3>UX/UI e prototipi Figma</h3><p>Interfacce intuitive e prototipi per validare idee.</p></article>
+          <article class="card reveal"><h3>Formazione web design</h3><p>Percorsi didattici modulari per studenti e team.</p></article>
+          <article class="card reveal"><h3>Consulenza digitale</h3><p>Supporto strategico su contenuti, struttura e conversione.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="progetti" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Progetti</h2>
+        </div>
+        <div id="projects-grid" class="grid cards-3" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt-bg" id="metodo">
+      <div class="container">
+        <h2>Metodo</h2>
+        <ol class="steps">
+          <li class="reveal"><strong>Analisi</strong><span>Obiettivi, utenti e contenuti.</span></li>
+          <li class="reveal"><strong>Prototipo</strong><span>Wireframe e UI in Figma.</span></li>
+          <li class="reveal"><strong>Sviluppo</strong><span>Implementazione curata e responsive.</span></li>
+          <li class="reveal"><strong>Pubblicazione</strong><span>Deploy e ottimizzazione continua.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contatti" class="section">
+      <div class="container narrow">
+        <h2>Contatti</h2>
+        <p>Scrivimi a <a href="mailto:ciao@paolosidoti.it">ciao@paolosidoti.it</a></p>
+        <ul class="social-links">
+          <li><a href="#" aria-label="Profilo LinkedIn">LinkedIn</a></li>
+          <li><a href="#" aria-label="Profilo GitHub">GitHub</a></li>
+          <li><a href="#" aria-label="Profilo Behance">Behance</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <div class="modal-overlay" id="errorModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
-    <div class="modal">
-      <h2 id="modalTitle">Errore</h2>
-      <p id="modalDesc">Si è verificato un errore. Riprova più tardi.</p>
-      <div class="modal-actions">
-        <button class="btn" id="closeModalBtn" type="button">Chiudi</button>
-      </div>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Paolo Sidoti — Portfolio statico data-driven.</p>
     </div>
-  </div>
+  </footer>
 
-  <script>
-    const startBtn = document.getElementById('startBtn');
-    const errorModal = document.getElementById('errorModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-
-    const openModal = () => errorModal.classList.add('open');
-    const closeModal = () => errorModal.classList.remove('open');
-
-    startBtn.addEventListener('click', openModal);
-    closeModalBtn.addEventListener('click', closeModal);
-
-    errorModal.addEventListener('click', (event) => {
-      if (event.target === errorModal) closeModal();
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeModal();
-    });
-  </script>
+  <script src="data/projects.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
